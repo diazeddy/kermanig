@@ -1,0 +1,6 @@
+.paginaion-bar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    align-self: center;
+}
