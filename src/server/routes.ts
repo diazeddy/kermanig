@@ -13,7 +13,7 @@ router.get('/:type', (req, res) => {
             case 'collections': data = collections; break;
             case 'products': data = products; break;
             case 'carousels': data = carousels; break;
-            default: return res.status(404).json({ error: 'Invalid data type requested' });
+            default: return res.status(400).json({ error: 'Invalid data type requested' });
         }
         res.status(200).json(data);
     } catch (error) {
@@ -39,7 +39,7 @@ router.put('/:type', (req, res) => {
             carousels.splice(0, carousels.length, ...parsedData);
             break;
         default:
-            return res.status(404).json({ error: 'Invalid data type requested' });
+            return res.status(400).json({ error: 'Invalid data type requested' });
         }
 
         res.status(200).json({ success: true });

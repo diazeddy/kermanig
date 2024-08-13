@@ -69,9 +69,9 @@ const ProductDetailPage: React.FC = () => {
           </div>
           <div className="flex flex-row w-full items-center justify-between px-5">
             {
-              data.products.slice(1).map((product) => {
+              data.products[0].images.map((product) => {
                 return (
-                  <img src={product.image} className="cursor-pointer" />
+                  <img src={product} className="cursor-pointer w-[500px] h-[500px]" />
                 );
               })
             }

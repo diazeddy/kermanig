@@ -4,6 +4,7 @@ export interface ProductProps {
     star: number;
     price: number;
     image: string;
+    images: string[];
 }
 
 export interface CarouselProps {

@@ -41,6 +41,10 @@ export const products = [
         "id": 0,
         "title": "Mozzarella & Pesto Focaccia",
         "image": "https://www.kermanig.com/cdn/shop/products/Pesto1.jpg?v=1595713723&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https:////www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -48,6 +52,10 @@ export const products = [
         "id": 1,
         "title": "Mozzarella & Basil Focaccia",
         "image": "https://www.kermanig.com/cdn/shop/products/Mozzarella1.jpg?v=1595713620&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -55,6 +63,10 @@ export const products = [
         "id": 2,
         "title": " Rustic Olive Focaccia",
         "image": "https://www.kermanig.com/cdn/shop/products/20200615_170657.jpg?v=1595713632&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -62,6 +74,10 @@ export const products = [
         "id": 3,
         "title": "Jalapeño & Cheese Focaccia",
         "image": "https://www.kermanig.com/cdn/shop/products/20200615_172508.jpg?v=1596138274&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -69,6 +85,10 @@ export const products = [
         "id": 4,
         "title": "Pita Chips - Garlic",
         "image": "https://www.kermanig.com/cdn/shop/products/Pitachipsalone_fbd05619-89f1-47fa-8e0f-b391016d20b0.jpg?v=1595536152&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -76,6 +96,10 @@ export const products = [
         "id": 5,
         "title": "Pita Chips - Lemon & Herbs",
         "image": "https://www.kermanig.com/cdn/shop/products/Pitachipsalone.jpg?v=1595535980&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -83,6 +107,10 @@ export const products = [
         "id": 6,
         "title": "Pita Chips - Spicy",
         "image": "https://www.kermanig.com/cdn/shop/products/Pitachipsalone_3ff33094-f272-49a1-9cc5-cc51aabf6755.jpg?v=1595536069&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -90,6 +118,10 @@ export const products = [
         "id": 7,
         "title": "Pita chips - Original",
         "image": "https://www.kermanig.com/cdn/shop/products/Pitachipsalone_48d0702b-a7fb-4cfb-9861-2776dce020ba.jpg?v=1680734618&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 7.99,
         "star": 3
     },
@@ -97,6 +129,10 @@ export const products = [
         "id": 8,
         "title": "Almond Cake",
         "image": "https://www.kermanig.com/cdn/shop/products/20200701_161708.jpg?v=1596140081&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -104,6 +140,10 @@ export const products = [
         "id": 9,
         "title": "Chocolate Chip Cake",
         "image": "https://www.kermanig.com/cdn/shop/products/20200701_161144.jpg?v=1600892685&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -111,6 +151,10 @@ export const products = [
         "id": 10,
         "title": "Raisin Cake",
         "image": "https://www.kermanig.com/cdn/shop/products/20200701_161559.jpg?v=1596141020&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -118,6 +162,10 @@ export const products = [
         "id": 11,
         "title": "Cup Cakes",
         "image": "https://www.kermanig.com/cdn/shop/products/20200701_160923.jpg?v=1596141214&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -125,6 +173,10 @@ export const products = [
         "id": 12,
         "title": "Coconut Pastry",
         "image": "https://www.kermanig.com/cdn/shop/files/Coconut.jpg?v=1696628551&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -132,6 +184,10 @@ export const products = [
         "id": 13,
         "title": "French Cookies",
         "image": "https://www.kermanig.com/cdn/shop/products/2.jpg?v=1695841527&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -139,6 +195,10 @@ export const products = [
         "id": 14,
         "title": "Lemon Cookie",
         "image": "https://www.kermanig.com/cdn/shop/products/LemonCookieOnPlate.png?v=1695840875&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -146,6 +206,10 @@ export const products = [
         "id": 15,
         "title": "Chocolate Chip Cookie",
         "image": "https://www.kermanig.com/cdn/shop/products/Chocolatechipcookieedited.png?v=1612909612&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -153,6 +217,10 @@ export const products = [
         "id": 16,
         "title": "Long Baklava",
         "image": "https://www.kermanig.com/cdn/shop/products/2222.jpg?v=1681316022&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -160,6 +228,10 @@ export const products = [
         "id": 17,
         "title": "Square Baklava",
         "image": "https://www.kermanig.com/cdn/shop/products/sqauresngle111.jpg?v=1668119124&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -167,6 +239,10 @@ export const products = [
         "id": 18,
         "title": "Round Baklava",
         "image": "https://www.kermanig.com/cdn/shop/products/RoundSinglepicture202311111.jpg?v=1668106734&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     },
@@ -174,6 +250,10 @@ export const products = [
         "id": 19,
         "title": "Baklava Assorted",
         "image": "https://www.kermanig.com/cdn/shop/products/Assorted_3.jpg?v=1694804397&width=360",
+        "images": [
+            "https://www.kermanig.com/cdn/shop/products/Newfixed000000.jpg?v=1681244936&width=1100",
+            "https://www.kermanig.com/cdn/shop/products/Sqaureclearforweb1.jpg?v=1668115903&width=1946",
+        ],
         "price": 9.99,
         "star": 3
     }
