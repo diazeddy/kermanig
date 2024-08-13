@@ -1,0 +1,42 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+  
+.header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logger {
+    display: grid;
+    flex-grow: 1;
+    justify-items: center;
+}
+  
+.cart {
+    width: 100px;
+    display: flex;
+    flex-grow: 0;
+    justify-items: center;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+}
