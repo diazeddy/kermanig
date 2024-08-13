@@ -1,26 +1,20 @@
 import { useState, useEffect, useRef } from "react";
+import { CartProps } from "../types/types";
 import { jsPDF } from "jspdf"
-
-type CartItem = {
-    title: string;
-    description: string;
-    quantity: number;
-    image: string;
-};
 
 const CartPage = () => {
     const reportTemplateRef = useRef<HTMLDivElement | null>(null);
-    const [cartData, setCartData] = useState<Record<string, CartItem>>({});
+    const [cartData, setCartData] = useState<Record<string, CartProps>>({});
     useEffect(() => {
         fetchCartDataFromStorage();
     }, []);
 
     const fetchCartDataFromStorage = () => {
-        const cartStorage: CartItem[] = JSON.parse(localStorage.getItem("cart") || "{}");
-        const newCartData: Record<string, CartItem> = {};
+        const cartStorage: CartProps[] = JSON.parse(localStorage.getItem("cart") || "{}");
+        const newCartData: Record<string, CartProps> = {};
         cartStorage?.forEach((cartItem) => {
             if (newCartData[cartItem.title]) {
-                newCartData[cartItem.title].quantity += cartItem.quantity;
+                newCartData[cartItem.title].quantity += Number(cartItem.quantity);
             } else {
                 newCartData[cartItem.title] = cartItem;
             }
@@ -29,7 +23,7 @@ const CartPage = () => {
     };
 
     const onRemoveCartItem = (title: string) => {
-        const existingCartItems: CartItem[] = JSON.parse(localStorage.getItem("cart") || "{}");
+        const existingCartItems: CartProps[] = JSON.parse(localStorage.getItem("cart") || "{}");
         const newCartItems = existingCartItems.filter(
             (cartItem) => cartItem.title !== title
         );
@@ -43,7 +37,7 @@ const CartPage = () => {
             unit: 'px',
         });
 
-        doc.setFont('Inter-Regular', 'small');
+        doc.setFont('Inter-Regular', 'medium');
 
         const reportTemplate = reportTemplateRef.current;
             if (reportTemplate) {
@@ -56,6 +50,22 @@ const CartPage = () => {
                 console.error("Report template is not available.");
             }
     };
+
+    const onChangeQuantity = (e: React.ChangeEvent<HTMLInputElement> , title: string) => {
+        const existingCartItems: CartProps[] = JSON.parse(localStorage.getItem("cart") || "{}");
+        const existingItem = existingCartItems.find((cartItem) => cartItem.title === title);
+        const newCartItems = existingCartItems.filter(
+            (cartItem) => cartItem.title !== title
+        );
+        localStorage.setItem("cart", JSON.stringify([
+            ...newCartItems,
+            {
+            ...existingItem,
+            "quantity": Number(e.target.value)
+            }
+        ]));
+        fetchCartDataFromStorage();
+    }
 
     return (
         <>
@@ -72,7 +82,10 @@ const CartPage = () => {
                                 <div className="flex flex-col flex-grow">
                                     <p className="font-bold text-lg">{title}</p>
                                     <p className="text-gray-600">{cartItem.description}</p>
-                                    <p className="text-sm text-gray-500">Quantity: {cartItem.quantity}</p>
+                                    <div className="text-sm text-gray-500">
+                                        Quantity:
+                                        <input type="number" value={Number(cartData[title].quantity)} onChange={(e) => onChangeQuantity(e, title)} />
+                                    </div>
                                 </div>
                                 <button 
                                     onClick={() => onRemoveCartItem(title)} 

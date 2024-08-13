@@ -1,22 +1,21 @@
 import { useState, useEffect } from "react";
 import { CiUser, CiShoppingCart } from "react-icons/ci";
 import { useNavigate, Outlet, Link } from "react-router-dom";
+import { CartProps } from "../types/types";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import './Header.css';
 
 const Header = () => {
   const history = useNavigate();
-  const [cartQuantity, setCartQuantity] = useState<number>(0);
-
+  const [updated, setUpdated] = useState(false);
+  
   useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
-    if (Array.isArray(cart)) {
-      const totalQuantity = cart
-        .map((item: any) => item?.quantity)
-        .reduce((acc: number, curr: number) => acc + curr, 0);
-      setCartQuantity(totalQuantity);
-    }
+    const intervalId = setInterval(() => {
+      setUpdated(prevUpdated => !prevUpdated);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -33,11 +32,17 @@ const Header = () => {
             <CiUser onClick={() => history("/admin")} size={40} />
             <div className="cart">
                 <CiShoppingCart onClick={() => history("/cart")} size={40} />
-                {cartQuantity > 0 && (
-                    <div className="badge-container">
-                        <div className="badge">{cartQuantity}</div>
-                    </div>
-                )}
+                <div className="badge-container">
+                  <div className="badge">
+                    {(() => {
+                        const cart: CartProps[] = JSON.parse(localStorage.getItem("cart") || "{}");
+                        if (cart.length > 0) {
+                          return cart.reduce((total, item) => total + Number(item.quantity), 0);
+                        }
+                        return 0;
+                      })()}
+                  </div>
+                </div>
             </div>
         </div>
         <div className="flex flex-row w-full items-center justify-between px-20 text-[#A18642]">

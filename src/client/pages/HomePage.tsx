@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
+import { CollectionProps, CarouselProps } from "../types/types";
 import axios from "axios";
 
 import './HomePage.css';
@@ -11,24 +12,23 @@ const responsive = {
 
 const Content: React.FC = () => {
   const history = useNavigate();
-  const [collections, setCollections] = useState([]);
-  const [items, setItems] = useState<any>([]); 
+  const [collections, setCollections] = useState<CollectionProps[]>([]);
+  const [items, setItems] = useState<JSX.Element[]>([]); 
 
   useEffect(() => {
     const fetchCollections = async () => {
-      const response = await axios.get("/api/collections");
+      const response = await axios.get<CollectionProps[]>("/api/collections");
       setCollections(response.data);
     };
 
     const fetchCarouseuls = async () => {
-      const response = await axios.get("/api/carousels");
-      const newItems = response.data.map((carousel: any, index: any) => {
+      const response = await axios.get<CarouselProps[]>("/api/carousels");
+      const newItems = response.data.map((carousel, index) => {
         return (
           <div className="item" data-value={index + 1} key={index}>
             <img
               src={carousel.src}
               height={carousel.height}
-              loading={carousel.loading}
               sizes={carousel.sizes}
               alt={`Carousel ${index}`}
               width={800}
@@ -62,7 +62,7 @@ const Content: React.FC = () => {
         />
       </div>
       <div className="flex flex-col items-center justify-content w-full px-3 text-[#996633]">
-        {collections.map((collection: any, index: any) => {
+        {collections.map((collection, index) => {
           return (
             <div className="flex flex-row w-full border-[1px] border-solid border-[#996633] my-5">
               {index % 2 ? (
